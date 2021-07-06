@@ -1,0 +1,1 @@
+import slide1 from "../img/Chess-Carousel/"

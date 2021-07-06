@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"); */
+
+:root {
+  --color-primary-1: #063251;
+  --color-primary-2: #104e7a;
+  --color-primary-3: #1a6aa2;
+  --color-primary-4: #2d87c8;
+
+  --color-green: #197a19;
+
+  --color-red: #eb2f64;
+  --color-red-light: #ff3366;
+  --color-red-dark: #ba265d;
+
+  --color-orange: #f5972b;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-blue: 0 2rem 5rem rgba(15, 173, 235, 0.527);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh !important;
+}
+
+/*//////////////CURSOR/////////////*/
+
+.cursor {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    /* transform:translate(-50%, -50%); */
+    mix-blend-mode: difference;
+    background-color: transparent;
+    animation: cursorAnimation .5s infinite alternate;
+  }
+
+  @keyframes cursorAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.8);
+    }
+}
+
+/* Toggle Sections */
+/* .inverse {
+
+} */
+
+/* Carousel */
+.slider {
+  position: relative;
+  height: 80vh;
+  display:flex;
+  justify-content: center;
+  align-items: center ;
+  margin-top:50px
+}
+
+.image-slider {
+  width: 500px;
+  height: 600px;
+  border-radius:10px;
+  border: 2px solid black;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 520px;
+  font-size: 5rem;
+  color:#000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 520px;
+  font-size: 5rem;
+  color:#000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08) translateX(0);
+}
+
+/* article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+} */
+.lastSlide {
+  transform: translateX(-100%);
+}
+.nextSlide {
+  transform: translateX(100%);
+}
+
+/* .carousel_image{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  object-fit:cover;
+  z-index: 100;
+}  */
+
+  /* .about:hover ~ .cursor{
+    transform: scale(6);
+  } */
+
+  /* .cursor::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -10px;
+    left: -10px;
+  } */
+
+/* .MuiTab-textColorPrimary {
+    /* color: rgb(0 0 0 / 98%) !important; */
+    /* font-size: 1.5rem !important; */
+    /* font-weight: 700!important; */
+/* } */ 
+
+/* .MuiButtonBase-root:focus, .MuiButtonBase-root:active {
+  font-size: 1.7rem !important;
+  color: #fff!important;
+} */
+/* .MuiButtonBase-root{
+  font-size: 1.2rem !important;
+  color: #000!important;
+} */
+
+/*//////////////BACK TO TOP SVG ICON/////////////*/
+/* .MuiSvgIcon-root {
+  width: 3rem !important;
+  height: 3rem !important;
+} */
+/*//////////////TOGGLE NAV SVG ICON/////////////*/
+
+#toggle-btn-navbar:hover {
+  transform: rotate(150deg);
+  transition: all 0.3s ease-in-out;
+  color:#fff
+}
+
+/*//////////////DRAWER TABS/////////////*/
+
+.MuiListItem-root {
+  padding: 1.5rem 5.5rem 1.5rem !important;
+  
+}
+
+.MuiTypography-body1 {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+/*//////////////Hero Page/////////////*/
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* .header-wraper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+ 
+} */
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.main-info h1 {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: var(--color-white);
+  /* text-transform: uppercase; */
+  margin-bottom: 0 0 35px 0!important;
+}
+
+.main-info h1 span {
+  font-size: 50px;
+  color: var(--color-white);
+}
+
+/*I need to add many more media queries*/
+
+@media (max-width: 1200px) {
+  .main-info h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-info h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-info h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-info h1 {
+    font-size: 3.7rem;
+  }
+}
+
+.typed-text {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 5rem;
+  color: var(--color-white);
+}
+
+@media (max-width: 1200px) {
+  .typed-text {
+    font-size: 4.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .typed-text {
+    font-size: 4.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .typed-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .typed-text {
+    font-size: 3.5rem;
+  }
+}
+
+.btn-main {
+  border: 2px solid var(--color-red-light);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 12px 12px 12px;
+  margin-top: 65px;
+  font-size: 20px;
+  color: var(--color-red-light);
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .btn-main {
+    padding: 9px 11px 11px 11px;
+    margin-top: 32px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-main {
+    padding: 8px 10px 10px 10px;
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-main {
+    padding: 7px 9px 9px 9px;
+    margin-top: 28px;
+    font-size: 14px;
+  }
+}
+
+.btn-main:hover {
+  color: var(--color-white);
+  background-color: var(--color-green);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+/*//////////////CONTACTS/////////////*/
+
+/* .form-background {
+    background: linear-gradient(to right, #7ed56f, #28b485);
+    width: 100vw !important;
+    height: 80vh;
+    display: flex;
+  align-content: center;
+  justify-content: center;
+    position: relative;
+} */
+
+.contact-wrap {
+ font-family: inherit;
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form {
+  padding: 30px 30px;
+  border: 2px solid black;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  margin: 40px 0;
+  width: 40%;
+}
+.form h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  /* position: absolute; */
+  width: 100%;
+}
+
+.form-control input {
+   border: 2px solid #f0f0f0; 
+   border-radius: 4px;
+   display: block;
+   width: 100%;
+   padding: 10px;
+   font-size: 1.6rem;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: var(--color-grey-dark-1);
+}
+
+
+.success-message {
+    font-size: 2.5rem;
+    color: var(--color-primary-1);
+}
+
+.error-message {
+    font-size: 2rem;
+    color: var(--color-red);
+}
+
+.form-control label {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.text-area {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+/* .form-btn {
+    height: 40px;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    width: 100%;
+} */
+
+
+.right-img {
+ position: absolute;
+ top: 34%;
+ right: 4%;
+}
+
+.left-img {
+    position: absolute;
+    top: 31%;
+    left: 10%;
+}
